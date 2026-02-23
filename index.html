@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Natural - Pure Herbal Products</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="public/images/Favicon.png" />
+
+  <!-- General Sans Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['"General Sans"', 'sans-serif'],
+            body: ['"General Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50:  '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-white font-body text-gray-800 antialiased" style="font-family: 'General Sans', sans-serif;">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group shrink-0">
+          <img src="public/images/Favicon.png" alt="Global Natural" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover transition-transform duration-300 group-hover:scale-110" />
+          <span class="text-xl sm:text-2xl font-heading font-bold text-gray-900 tracking-tight">
+            Global <span class="text-brand-600">Natural</span>
+          </span>
+        </a>
+
+        <!-- Nav CTA -->
+        <a href="#products" class="inline-flex items-center gap-2 px-5 py-2.5 bg-brand-600 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all duration-300 hover:shadow-lg hover:shadow-brand-200 shrink-0">
+          Shop Now
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="relative pt-16 sm:pt-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+        <!-- Hero Text -->
+        <div class="flex-1 text-center lg:text-left hero-text-animate">
+          <span class="inline-block px-4 py-1.5 mb-5 text-xs font-semibold tracking-wider uppercase text-brand-700 bg-brand-50 rounded-full border border-brand-100 animate-badge">
+            100% Pure &amp; Natural
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-gray-900 leading-tight">
+            Nature's Best,<br/>
+            <span class="text-brand-600 hero-gradient-text">Delivered Pure.</span>
+          </h1>
+          <p class="mt-5 text-base sm:text-lg text-gray-500 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            Discover our premium collection of herbal powders, crafted from the finest organic herbs for your health &amp; wellness.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <a href="#products" class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 transition-all duration-300 hover:shadow-xl hover:shadow-brand-200 hover:-translate-y-0.5 btn-shimmer">
+              Explore Products
+              <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="flex-1 relative hero-image-animate">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] mx-auto">
+            <!-- Decorative rings -->
+            <div class="absolute inset-0 rounded-full bg-brand-100/40 animate-pulse-slow"></div>
+            <div class="absolute inset-3 rounded-full border-2 border-dashed border-brand-200/50 animate-spin-very-slow"></div>
+            <!-- Hero Image -->
+            <div class="absolute inset-6 rounded-full overflow-hidden shadow-2xl shadow-brand-200/40 ring-4 ring-white">
+              <img src="public/images/HeroSection.png" alt="Global Natural — Herbal Products" class="w-full h-full object-cover" />
+            </div>
+            <!-- Floating badges -->
+            <div class="absolute bottom-6 -left-4 bg-white shadow-lg rounded-2xl px-4 py-2 animate-float animation-delay-1000">
+              <span class="text-xs font-semibold text-brand-700">❤️ 100% Natural</span>
+            </div>
+            <div class="absolute top-1/2 -right-3 bg-white shadow-lg rounded-2xl px-4 py-2 animate-float animation-delay-600">
+              <span class="text-xs font-semibold text-brand-700">🍃 Organic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative wave divider -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+      <svg class="relative block w-full h-12 sm:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="#f0fdf4" opacity=".5"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="#f0fdf4" opacity=".3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section id="products" class="bg-gradient-to-b from-brand-50/50 to-white py-16 sm:py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-12 sm:mb-16 animate-on-scroll">
+        <span class="inline-block px-4 py-1.5 mb-4 text-xs font-semibold tracking-wider uppercase text-brand-700 bg-brand-100 rounded-full">
+          Our Collection
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-gray-900">
+          Premium Herbal Products
+        </h2>
+        <p class="mt-4 text-gray-500 max-w-xl mx-auto">
+          Handpicked, lab-tested, and packed with nature's goodness.
+        </p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="mb-8 sm:mb-10 animate-on-scroll">
+        <div class="relative max-w-xl mx-auto">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            class="w-full pl-12 pr-12 py-3.5 rounded-full border border-gray-200 bg-white text-sm sm:text-base shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent focus:shadow-md transition-all duration-300 placeholder:text-gray-400"
+          />
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <button id="clearSearch" class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-gray-200 text-gray-500 items-center justify-center text-xs hover:bg-gray-300 transition-all duration-200 hidden">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="hidden text-center py-16">
+        <svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+        <h3 class="text-xl font-heading font-semibold text-gray-400">No products found</h3>
+        <p class="mt-2 text-gray-400 text-sm">Try searching with a different keyword.</p>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+
+        <!-- Product 1 — Amla Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Amla Powder Emblica Officinalis Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_1.jpg" alt="Amla Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_1_1.jpg" alt="Amla Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Amla Powder (Emblica Officinalis) – Non GMO – Vegan – (454 Gms – 1LBS)">
+                Amla Powder (Emblica Officinalis) – Non GMO – Vegan – (454 Gms – 1LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$15.95</span>
+                <span class="text-sm text-gray-400 line-through">$17.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 — Arjuna Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Arjuna Powder Terminalia Arjuna Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_2.jpg" alt="Arjuna Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_2_1.jpg" alt="Arjuna Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Arjuna Powder (Terminalia Arjuna) – Non GMO – Vegan – (454 Gms – 1LBS Pack)">
+                Arjuna Powder (Terminalia Arjuna) – Non GMO – Vegan – (454 Gms – 1LBS Pack)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$15.95</span>
+                <span class="text-sm text-gray-400 line-through">$17.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 — Ashoka Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Ashoka Powder Saraca Asoca Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_3.jpg" alt="Ashoka Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_3_1.jpg" alt="Ashoka Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Ashoka Powder (Saraca Asoca) – Non GMO – Vegan – (454 Gms – 1LBS)">
+                Ashoka Powder (Saraca Asoca) – Non GMO – Vegan – (454 Gms – 1LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$15.95</span>
+                <span class="text-sm text-gray-400 line-through">$17.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 — Ashwagandha Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Ashwagandha Powder Withania Somnifera Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_4.jpg" alt="Ashwagandha Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_4_1.jpg" alt="Ashwagandha Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Ashwagandha Powder (Withania Somnifera) – Non GMO – Vegan – (454 Gms – 1LBS)">
+                Ashwagandha Powder (Withania Somnifera) – Non GMO – Vegan – (454 Gms – 1LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$16.95</span>
+                <span class="text-sm text-gray-400 line-through">$19.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 — Bilva Fruit Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Bilva Fruit Powder Aegle marmelos Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_5.jpg" alt="Bilva Fruit Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_5_1.jpg" alt="Bilva Fruit Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Bilva Fruit Powder – (Aegle marmelos) – Non GMO – Vegan – (454 Gms – 1LBS)">
+                Bilva Fruit Powder – (Aegle marmelos) – Non GMO – Vegan – (454 Gms – 1LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$15.95</span>
+                <span class="text-sm text-gray-400 line-through">$17.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 — Babchi Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Babchi Powder Psoralea Corylifolia Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_6.jpg" alt="Babchi Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_6_1.jpg" alt="Babchi Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Babchi Powder (Psoralea Corylifolia) – Non GMO – Vegan – (230 Gms)">
+                Babchi Powder (Psoralea Corylifolia) – Non GMO – Vegan – (230 Gms)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$14.95</span>
+                <span class="text-sm text-gray-400 line-through">$17.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7 — Bala Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Bala Powder Sida Cordifolia Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_7.jpg" alt="Bala Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_7_1.jpg" alt="Bala Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Bala Powder (Sida Cordifolia) – Non GMO – Vegan – (454 Gms -1 LBS)">
+                Bala Powder (Sida Cordifolia) – Non GMO – Vegan – (454 Gms -1 LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$19.95</span>
+                <span class="text-sm text-gray-400 line-through">$24.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8 — Bhumi Amlaki Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Bhumi Amlaki Powder Phyllanthus Niruri Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_8.jpg" alt="Bhumi Amlaki Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_8_1.jpg" alt="Bhumi Amlaki Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Bhumi Amlaki Powder (Phyllanthus Niruri) – Non GMO – Vegan – (454 Gms – 1LBS)">
+                Bhumi Amlaki Powder (Phyllanthus Niruri) – Non GMO – Vegan – (454 Gms – 1LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$18.95</span>
+                <span class="text-sm text-gray-400 line-through">$24.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9 — Bibhitaki Powder -->
+        <div class="product-card group animate-on-scroll" data-name="Bibhitaki Powder Terminalia Bellerica Non GMO Vegan">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 card-shine">
+            <div class="relative aspect-square overflow-hidden bg-gray-50">
+              <img src="public/images/Product_9.jpg" alt="Bibhitaki Powder" class="product-img-default absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out group-hover:opacity-0 group-hover:scale-110" />
+              <img src="public/images/Product_9_1.jpg" alt="Bibhitaki Powder - Alternate" class="product-img-hover absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:scale-105" />
+              <div class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-full tracking-wide shadow-lg z-10">Sale</div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-sm sm:text-base font-heading font-semibold text-gray-900 group-hover:text-brand-700 transition-colors duration-300 product-title" title="Bibhitaki Powder (Terminalia Bellerica) – Non GMO – Vegan – (454 Gms -1 LBS)">
+                Bibhitaki Powder (Terminalia Bellerica) – Non GMO – Vegan – (454 Gms -1 LBS)
+              </h3>
+              <div class="mt-3 flex items-center justify-center gap-2">
+                <span class="text-xl font-bold text-brand-600">$15.95</span>
+                <span class="text-sm text-gray-400 line-through">$19.95</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

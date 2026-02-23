@@ -1,0 +1,338 @@
+/* ========================================
+   Global Natural — Custom Styles
+   ======================================== */
+
+/* ---------- Smooth scroll ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background-color: #bbf7d0;
+  color: #14532d;
+}
+
+/* ========================================
+   HERO ANIMATIONS
+   ======================================== */
+
+/* Hero text staggered entrance */
+.hero-text-animate {
+  animation: heroTextIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes heroTextIn {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero image entrance */
+.hero-image-animate {
+  opacity: 0;
+  animation: heroImageIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+@keyframes heroImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Badge pop-in */
+.animate-badge {
+  animation: badgePop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both;
+}
+
+@keyframes badgePop {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Gradient text shimmer on hero */
+.hero-gradient-text {
+  background: linear-gradient(90deg, #16a34a, #4ade80, #16a34a);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShimmer 4s ease-in-out infinite;
+}
+
+@keyframes gradientShimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* Button shimmer overlay */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: btnShimmer 3s ease-in-out infinite;
+}
+
+@keyframes btnShimmer {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+/* Very slow spin for decorative ring */
+.animate-spin-very-slow {
+  animation: spinSlow 30s linear infinite;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ========================================
+   GENERAL ANIMATIONS
+   ======================================== */
+
+/* Fade-in-up */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Slow pulse */
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.25;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+/* Animation delay helpers */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger product cards */
+.product-card:nth-child(1) { transition-delay: 0.05s; }
+.product-card:nth-child(2) { transition-delay: 0.12s; }
+.product-card:nth-child(3) { transition-delay: 0.19s; }
+.product-card:nth-child(4) { transition-delay: 0.26s; }
+.product-card:nth-child(5) { transition-delay: 0.33s; }
+.product-card:nth-child(6) { transition-delay: 0.40s; }
+.product-card:nth-child(7) { transition-delay: 0.47s; }
+.product-card:nth-child(8) { transition-delay: 0.54s; }
+.product-card:nth-child(9) { transition-delay: 0.61s; }
+
+/* ========================================
+   PRODUCT CARD STYLES
+   ======================================== */
+
+/* Title truncation — 2-line clamp with ellipsis */
+.product-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  min-height: 2.8em;
+}
+
+/* Card shine on hover */
+.card-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  z-index: 5;
+  transform: skewX(-25deg);
+  transition: left 0.75s ease;
+  pointer-events: none;
+}
+
+.card-shine:hover::before {
+  left: 125%;
+}
+
+/* Image fallback background */
+.product-card img {
+  background-color: #f3f4f6;
+}
+
+/* Sale badge pulse */
+.product-card .bg-red-500 {
+  animation: salePulse 2s ease-in-out infinite;
+}
+
+@keyframes salePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ========================================
+   SEARCH
+   ======================================== */
+
+@keyframes highlightPulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); }
+  70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.search-highlight {
+  animation: highlightPulse 0.6s ease-out;
+}
+
+.product-card.hidden-by-search {
+  display: none;
+}
+
+/* ========================================
+   RESPONSIVE HELPERS
+   ======================================== */
+
+/* Mobile search bar — fullwidth overlay style */
+@media (max-width: 639px) {
+  .product-title {
+    font-size: 0.7rem;
+    -webkit-line-clamp: 2;
+    min-height: 2em;
+  }
+
+  .product-card .p-5 {
+    padding: 0.75rem;
+  }
+
+  .product-card .text-xl {
+    font-size: 0.95rem;
+  }
+
+  .product-card .text-sm.line-through {
+    font-size: 0.7rem;
+  }
+
+  .product-card .mt-3 {
+    margin-top: 0.4rem;
+  }
+
+  /* Sale badge size on mobile */
+  .product-card .bg-red-500 {
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+}
+
+/* Ensure font family is applied everywhere */
+body, input, button, select, textarea {
+  font-family: 'General Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'General Sans', sans-serif;
+}
